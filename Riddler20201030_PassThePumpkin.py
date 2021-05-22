@@ -23,7 +23,7 @@ for i in range(x_range):
         print("Lowest possible N is :\t", i)
         N = i
         break
-    
+# Result : Lowest possible N is :	 136232    
 #%%
 """
 Extra credit: Suppose the players were numbered from 1 to 61, with you as Player No. 1, the player to your left as Player No. 2 and so on. Which player won the game?
@@ -39,7 +39,7 @@ while len(players) > 1:
     players = list(np.roll(players, -idx if idx >=0 else 0))
     print("Ends on player ", idx if idx >= 0 else len(players), "positions to left.\t\tPlayer ", player_out, " removed")
 print("Winner is player ", players, "!!!")
-
+# Result : Winner is player  [58]
 #%%
 """
 Extra extra credit: What’s the smallest N that would have made you the winner?
@@ -63,6 +63,7 @@ for N in possible_N:
     if players[0]==1:
         break
 print("Using N as :", N, "\tWinner is player ", players)
+# Result : Using N as : 42892352 	Winner is player  [1]
 
 # Assuming original starting order does NOT need to be maintained
 for N in range(1, x_range):
@@ -76,3 +77,4 @@ for N in range(1, x_range):
     if players[0]==1:
         break
 print("Using N as :", N, "\tWinner is player ", players)
+# Result : Using N as : 140 	Winner is player  [1]
